@@ -2,15 +2,11 @@ describe('Weather', function() {
 
   var weather;
 
-  beforeEach(function(){
-    weather = new Weather()
-  });
-
-  describe('isStormy', function() {
+  describe('forecast', function() {
 
     it('gives a forecast', function(){
-      console.log(weather.isStormy)
-      expect(weather.isStormy).toEqual(jasmine.any(Number));
+      weather = new Weather()
+      expect(weather.forecast).toEqual(jasmine.any(Number));
     });
   });
 });
