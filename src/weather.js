@@ -1,4 +1,4 @@
 function Weather(){
-  this.forecast = Math.floor((Math.random() * 10) + 1);
-  return this.forecast
-};
+  this.isStormy = (Math.floor((Math.random() * 10) + 1))>6;
+  // return this.forecast
+}

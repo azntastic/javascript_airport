@@ -6,7 +6,7 @@ describe('Weather', function() {
 
     it('gives a forecast', function(){
       weather = new Weather()
-      expect(weather.forecast).toEqual(jasmine.any(Number));
+      expect(weather.isStormy).toEqual(jasmine.any(Boolean));
     });
   });
 });
