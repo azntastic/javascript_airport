@@ -1,5 +1,7 @@
 describe('Airport', function() {
 
+function Plane(){}
+
   var airport;
 
   beforeEach(function() {
@@ -22,7 +24,25 @@ describe('Airport', function() {
     });
   });
 
-  // describe('knows the weather', function(){
-  //   it('u')
-  // })
+  describe('capacity', function(){
+    it('has a max capacity of 20', function(){
+      expect(airport.CAPACITY).toBe(10);
+    });
+  });
+
+  describe('error', function(){
+    // for(var i=0; i < 10; i++){
+    //   airport = new Airport()
+    //   airport.land(new Plane())
+    // }
+
+    it('throws an error if plane attempts landing when airport full', function(){
+      for(var i=0; i < 10; i++){
+        airport.land(new Plane())
+      }
+      expect(function() {airport.land(new Plane())}).toThrowError("Airport is full, landing denied")
+    });
+  });
+
+  describe('')
 });
